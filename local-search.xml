@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>学习|开源CFD软件OpenFOAM算例设置介绍</title>
+    <link href="/2024/10/20/r1_openfoamBasic/"/>
+    <url>/2024/10/20/r1_openfoamBasic/</url>
+    
+    <content type="html"><![CDATA[<hr><h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>做个学习博客，以飨后人。</p><p>本博客既可以作为新手入门指南，亦可以供熟练使用者备忘速查。</p><p>本博客侧重于算例设置，而非代码解析。</p><h1 id="一、基础认识"><a href="#一、基础认识" class="headerlink" title="一、基础认识"></a>一、基础认识</h1><h2 id="1-1-算例文件夹"><a href="#1-1-算例文件夹" class="headerlink" title="1.1 算例文件夹"></a>1.1 算例文件夹</h2><img title="" src="/img/openfoamBasic/Fig1_caseDir.jpg"  alt="" width="300" align=center/><p>&nbsp;</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Study</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>阅读|白马啸西风（金庸著）</title>
     <link href="/2024/10/13/p2_horse/"/>
     <url>/2024/10/13/p2_horse/</url>
