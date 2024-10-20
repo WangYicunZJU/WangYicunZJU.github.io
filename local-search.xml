@@ -8,7 +8,7 @@
     <link href="/2024/10/20/r1_openfoamBasic/"/>
     <url>/2024/10/20/r1_openfoamBasic/</url>
     
-    <content type="html"><![CDATA[<hr><h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>做个学习博客，以飨后人。</p><p>本博客既可以作为新手入门指南，亦可以供熟练使用者备忘速查。</p><p>本博客侧重于算例设置，而非代码解析。</p><h1 id="一、基础认识"><a href="#一、基础认识" class="headerlink" title="一、基础认识"></a>一、基础认识</h1><h2 id="1-1-算例文件夹"><a href="#1-1-算例文件夹" class="headerlink" title="1.1 算例文件夹"></a>1.1 算例文件夹</h2><img title="" src="/img/posts/openfoamBasic/Fig1_caseDir.jpg"  alt="" width="300" align=center/><p>&nbsp;</p>]]></content>
+    <content type="html"><![CDATA[<hr><h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>做个学习博客，以飨后人。</p><p>本博客既可以作为新手入门指南，亦可以供熟练使用者备忘速查。</p><p>本博客侧重于算例设置，而非代码解析。</p><p>本博客以OpenFOAM 7版本为例介绍，其他版本类似。</p><h1 id="一、基础认识"><a href="#一、基础认识" class="headerlink" title="一、基础认识"></a>一、基础认识</h1><h2 id="1-1-算例文件夹"><a href="#1-1-算例文件夹" class="headerlink" title="1.1 算例文件夹"></a>1.1 算例文件夹</h2><p>OpenFOAM的算例文件结构如下图所示。</p><img title="" src="/img/posts/openfoamBasic/Fig1_caseDir.jpg"  alt="" width="150" align=center/><p>&nbsp;</p><ul><li><p>time一系列文件夹包含物理场的计算结果。其中包括必须指定的初始数据以及边界条件，以及OpenFOAM求解器的计算结果。值得一提的是即使在稳态问题中（理论上讲稳态问题只需要边界条件），OpenFOAM的初始场也必须被初始化。每个时间步的名称由模拟结果决定。由于我们经常在0时刻开始我们的模拟，因此初始条件通常存储在0文件夹中。例如，在经典cavity算例中，速度场和压力场存储在0&#x2F;U和0&#x2F;p文件夹中。</p></li><li><p>constant文件夹包含了程序所需要的物理特性文件，例如transportProperties。constant&#x2F;polyMesh文件夹包含了网格文件。</p></li><li><p>system文件夹主要用于设置求解算法的参数。它<strong>至少</strong>包含3个基本的字典文件。其中，controlDict用于控制计算开始、终止时间、时间步，以及输出数据参数等；fvSchemes包含各种离散格式；fvSolution包含矩阵求解器设置、残差、以及其它算法控制。对于使用blockMesh画网格的算例，system文件夹中还有blockMeshDict文件。</p></li></ul>]]></content>
     
     
     
