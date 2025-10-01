@@ -1,0 +1,801 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Yicun">
+  <meta name="keywords" content="">
+  
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Page">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Page">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Yicun">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Page</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>我的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="In case I don&#39;t see you, good morning, good afternoon and good night. (The Truman Show)"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2025/10/01/p11_AI/" target="_self">
+          <img src="/img/posts/thinking/p_blade.jpg" srcset="/img/loading.gif" lazyload alt="学习|AI">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/10/01/p11_AI/" target="_self">
+          学习|AI
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2025/10/01/p11_AI/" target="_self">
+        <div>
+          大模型超算提供的DeepSeek端口： https://chat.scnet.cn/#/home  Grok官方： https://grok.com/?referrer=website Chatgpt官方： https://openai.com/chatgpt/overview/ Copilot官方： https://copilot.microsoft.com/onboarding Cursor
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-10-01 21:32" pubdate>
+              2025-10-01
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Study/">#Study</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2025/10/01/p10_EVA/" target="_self">
+          <img src="/img/posts/thinking/p_eva.jpg" srcset="/img/loading.gif" lazyload alt="补番|EVA新世纪福音战士">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/10/01/p10_EVA/" target="_self">
+          补番|EVA新世纪福音战士
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2025/10/01/p10_EVA/" target="_self">
+        <div>
+          补番|《EVA新世纪福音战士》(TV 1-24集+air&#x2F;真心为你)(死与新生)(剧场版四部曲：序、破、Q、终)碇真嗣绫波零明日香渚薰真希波葛城美里加持良治碇源堂啶唯冬月幸增赤木律子相田剑介铃原冬治 初号机零号机二号机SEELENERV第二次冲击第三次冲击第四次冲击第一使徒「亚当」第二使徒「莉莉丝」「人类补完计划」「勇敢的少年啊，快去创造奇迹」「只要微笑就好了」「真心为你」「终」「审视本
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-10-01 21:32" pubdate>
+              2025-10-01
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Life/">#Life</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2025/10/01/p9_tree/" target="_self">
+          <img src="/img/posts/thinking/p_listen.jpg" srcset="/img/loading.gif" lazyload alt="补番|藤本树作品">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/10/01/p9_tree/" target="_self">
+          补番|藤本树作品
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2025/10/01/p9_tree/" target="_self">
+        <div>
+          补番|《电锯人》补番|《蓦然回首》藤本树短篇《随心一听》《恋爱令人盲目》《一觉醒来变成女孩子的病》《妹妹的姐姐》《死格》《佐佐木他接下了子弹》《预言的那由多》
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-10-01 21:32" pubdate>
+              2025-10-01
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Life/">#Life</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2025/10/01/p8_wang/" target="_self">
+          <img src="/img/posts/thinking/p_huayang.jpg" srcset="/img/loading.gif" lazyload alt="观影|王家卫电影">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/10/01/p8_wang/" target="_self">
+          观影|王家卫电影
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2025/10/01/p8_wang/" target="_self">
+        <div>
+          观影|《重庆森林》王家卫执导故事梗概：编号为223的警察（金城武）失恋后患上失恋综合症，在与金发女杀手（林青霞）擦肩而过又离奇相遇并有了一晚温情后，原本以为包括“爱情”在内的所有东西都有保质期的他意外地迎来心灵的短暂温暖。可是，他们的爱情还是结束了。快餐店新来的女招待阿菲（王菲）爱上了时常光顾快餐店的编号 为663的警察（梁朝伟），因拆了他的女友（周嘉玲）留在快餐店给他的“分手” 信，阿菲知晓了他
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-10-01 21:32" pubdate>
+              2025-10-01
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Life/">#Life</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2025/10/01/p6_story/" target="_self">
+          <img src="/img/posts/thinking/p_sibaiji.jpg" srcset="/img/loading.gif" lazyload alt="杂记|故事">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/10/01/p6_story/" target="_self">
+          杂记|故事
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2025/10/01/p6_story/" target="_self">
+        <div>
+          观影|《爱情神话》邵艺辉执导故事梗概：该片讲述了上海爷叔老白（徐峥 饰）单身多金，在生活、工作中与单亲妈妈李小姐（马伊琍 饰）、被跑路的丈夫撇下的格洛瑞亚（倪虹洁 饰）、前妻蓓蓓（吴越 饰）三个女人产生交集的故事。故事以老白为轴拓展开去，用一个老克勒的眼光审视城市里的女性。  哪来的主人，往上面数两代三代，全是外地来的、全是客人。   把房子借给她住啊。。。你怎么想的啊，这是你的一小步，是人类关系
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-10-01 21:32" pubdate>
+              2025-10-01
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Life/">#Life</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2025/10/01/p5_poem/" target="_self">
+          <img src="/img/posts/thinking/p_libai.jpg" srcset="/img/loading.gif" lazyload alt="阅读|诗文">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/10/01/p5_poem/" target="_self">
+          阅读|诗文
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2025/10/01/p5_poem/" target="_self">
+        <div>
+          诗文【东晋】王羲之&#x2F;《兰亭集序》1234567891011永和九年，岁在癸丑，暮春之初，会于会稽山阴之兰亭，修禊(xi)事也。群贤毕至，少长咸集。此地有崇山峻岭，茂林修竹；又有清流激湍，映带左右，引以为流觞曲水，列坐其次。虽无丝竹管弦之盛，一觞一咏，亦足以畅叙幽情。是日也，天朗气清，惠风和畅，仰观宇宙之大，俯察品类之盛，所以游目骋怀，足以极视听之娱，信可乐也。夫人之相与，俯仰一世，或取诸
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-10-01 21:32" pubdate>
+              2025-10-01
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Life/">#Life</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2025/10/01/p4_huiye/" target="_self">
+          <img src="/img/posts/thinking/p_huiye.jpg" srcset="/img/loading.gif" lazyload alt="观影|辉夜姬物语（高畑勋执导）">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/10/01/p4_huiye/" target="_self">
+          观影|辉夜姬物语（高畑勋执导）
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2025/10/01/p4_huiye/" target="_self">
+        <div>
+          2024&#x2F;11&#x2F;2 吉卜力工作室根据日本古典文学《竹取物语》为蓝本所改编的动画电影，2013年11月23日于日本上映。 &nbsp; 故事梗概：住在深山老林里的老爷爷一早进山砍竹子，结果竟在附近的一根发光的竹笋中发现了只有掌心大小的娃娃。没有子女的老爷爷兴奋不已，他双手捧着娃娃回到家中，而小家伙竟然在老奶奶的手中越变越大。之后的岁月里，舐犊情深的爷爷小心呵护他的公主，小女孩则
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-10-01 21:32" pubdate>
+              2025-10-01
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Life/">#Life</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2025/10/01/p3_xueshan/" target="_self">
+          <img src="/img/posts/thinking/p_xueshan.jpg" srcset="/img/loading.gif" lazyload alt="阅读|雪山飞狐（金庸著）">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/10/01/p3_xueshan/" target="_self">
+          阅读|雪山飞狐（金庸著）
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2025/10/01/p3_xueshan/" target="_self">
+        <div>
+          2024&#x2F;10&#x2F;27 天龙门北宗腾龙剑曹云奇，回龙剑周云阳，七星手阮士中，锦毛貂田青文，天龙门南宗威震天南殷吉。饮马川山寨寨主镇关东陶百岁，陶子安。北京平通镖局的总镖头熊元献，京中一等侍卫+大内十八高手刘元鹤。宝树和尚阎基。杜希孟之家仆于管家。琴儿，双生僮儿。玉笔山庄庄主杜希孟。兴汉丐帮范帮主，天龙门北宗掌门人田归农，打遍天下无敌手金面佛苗人凤，辽东大侠胡一刀，胡夫人。苗若兰
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-10-01 21:32" pubdate>
+              2025-10-01
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Life/">#Life</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2025/10/01/p2_horse/" target="_self">
+          <img src="/img/posts/thinking/p_wenxiu.jpg" srcset="/img/loading.gif" lazyload alt="阅读|白马啸西风（金庸著）">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/10/01/p2_horse/" target="_self">
+          阅读|白马啸西风（金庸著）
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2025/10/01/p2_horse/" target="_self">
+        <div>
+          2024&#x2F;10&#x2F;13 白马李三，（金银小剑三娘子）上官虹，吕梁三杰（霍元龙、史仲俊、陈达海）。李文秀，苏普，阿曼。计爷爷（马家骏），瓦耳拉齐（华辉，一指震江南）。  马家骏嘴角边露出凄然的苦笑，轻轻的道：“江南的杨柳，已抽出嫩芽了，阿秀，你独自回去吧，以后……以后可得小心，计爷爷，计爷爷不能照顾你了……“声音越说越低，终于没了声息。   殿堂中一片漆黑，李文秀和瓦耳拉齐谁也见
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-10-01 21:32" pubdate>
+              2025-10-01
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Life/">#Life</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2025/10/01/p1_fox/" target="_self">
+          <img src="/img/posts/thinking/p_lingsu.jpg" srcset="/img/loading.gif" lazyload alt="阅读|飞狐外传（金庸著）">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/10/01/p1_fox/" target="_self">
+          阅读|飞狐外传（金庸著）
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2025/10/01/p1_fox/" target="_self">
+        <div>
+          引言飞狐外传（金庸著），读的第一本金庸小说。   第一章 大雨商家堡商宝震、商老太；百胜神拳马行空、徐峥、马春花；何思豪；阎基；田归农、南兰、打遍天下无敌手苗人凤、苗若兰（婴儿期）；平阿四、小胡斐；……后续出场的福康安一行人、赵半山 第二章 宝刀和柔情河北沧州，风雪残年，苗人凤、南兰、南仁通、鄂北鬼见愁钟氏三兄弟 第三章 英雄年少2024&#x2F;9&#x2F;14 商家堡，小胡斐无需她救，自行
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-10-01 21:32" pubdate>
+              2025-10-01
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Life/">#Life</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

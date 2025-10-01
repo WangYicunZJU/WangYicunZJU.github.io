@@ -1,0 +1,701 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Yicun">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="大模型超算提供的DeepSeek端口： https:&#x2F;&#x2F;chat.scnet.cn&#x2F;#&#x2F;home  Grok官方： https:&#x2F;&#x2F;grok.com&#x2F;?referrer&#x3D;website Chatgpt官方： https:&#x2F;&#x2F;openai.com&#x2F;chatgpt&#x2F;overview&#x2F; Copilot官方： https:&#x2F;&#x2F;copilot.microsoft.com&#x2F;onboarding Cursor">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习|AI">
+<meta property="og:url" content="http://example.com/2025/10/01/p11_AI/index.html">
+<meta property="og:site_name" content="Page">
+<meta property="og:description" content="大模型超算提供的DeepSeek端口： https:&#x2F;&#x2F;chat.scnet.cn&#x2F;#&#x2F;home  Grok官方： https:&#x2F;&#x2F;grok.com&#x2F;?referrer&#x3D;website Chatgpt官方： https:&#x2F;&#x2F;openai.com&#x2F;chatgpt&#x2F;overview&#x2F; Copilot官方： https:&#x2F;&#x2F;copilot.microsoft.com&#x2F;onboarding Cursor">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/posts/thinking/p_blade.jpg">
+<meta property="article:published_time" content="2025-10-01T13:32:10.326Z">
+<meta property="article:modified_time" content="2025-07-25T06:42:24.000Z">
+<meta property="article:author" content="Yicun">
+<meta property="article:tag" content="Study">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/posts/thinking/p_blade.jpg">
+  
+  
+  
+  <title>学习|AI - Page</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>我的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="学习|AI"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-10-01 21:32" pubdate>
+          2025年10月1日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          14 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">学习|AI</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <hr>
+<h3 id="大模型"><a href="#大模型" class="headerlink" title="大模型"></a>大模型</h3><p><strong>超算提供的DeepSeek端口</strong>： <a target="_blank" rel="noopener" href="https://chat.scnet.cn/#/home">https://chat.scnet.cn/#/home</a> </p>
+<p><strong>Grok官方</strong>： <a target="_blank" rel="noopener" href="https://grok.com/?referrer=website">https://grok.com/?referrer=website</a></p>
+<p><strong>Chatgpt官方</strong>： <a target="_blank" rel="noopener" href="https://openai.com/chatgpt/overview/">https://openai.com/chatgpt/overview/</a></p>
+<p><strong>Copilot官方</strong>： <a target="_blank" rel="noopener" href="https://copilot.microsoft.com/onboarding">https://copilot.microsoft.com/onboarding</a></p>
+<p><strong>Cursor官方</strong>： <a target="_blank" rel="noopener" href="https://cursor.com/">https://cursor.com</a>  ，编辑器，下载Windows版</p>
+<p><strong>Gemini</strong>： <a target="_blank" rel="noopener" href="https://gemini.google.com/">https://gemini.google.com/</a></p>
+<p><strong>KIMI</strong>: <a target="_blank" rel="noopener" href="https://www.kimi.com/">https://www.kimi.com/</a></p>
+<p><strong>Claude官方</strong>： <a target="_blank" rel="noopener" href="https://claude.ai/">https://claude.ai/</a></p>
+<blockquote>
+<p>Claude是由美国科技公司Anthropic公司开发的先进人工智能模型，该公司专注于创建安全、可靠且符合人类价值观的人工智能系统。Claude以信息论之父香农的名字命名。</p>
+</blockquote>
+<p><strong>Claude Code</strong>： <a target="_blank" rel="noopener" href="https://www.anthropic.com/claude-code">https://www.anthropic.com/claude-code</a></p>
+<p><strong>Claude完全指南</strong>： <a target="_blank" rel="noopener" href="https://github.com/zebbern/claude-code-guide">https://github.com/zebbern/claude-code-guide</a></p>
+<p><strong>github copilot</strong>： <a target="_blank" rel="noopener" href="https://github.com/features/copilot">https://github.com/features/copilot</a> ，插件，代码补全。</p>
+<p><strong>通义</strong>： <a target="_blank" rel="noopener" href="https://tongyi.aliyun.com/">https://tongyi.aliyun.com/</a></p>
+<p><strong>阿里Qwen-QwQ-32B，单卡RTX4090可以跑，基准测试齐平满血DeepSeek R1,推理成本再次断崖下降</strong>： <a target="_blank" rel="noopener" href="https://ollama.com/library/qwq">https://ollama.com/library/qwq</a></p>
+<p><strong>字节发布国内首款AI IDE——Trae，AI 编程的门槛再次降低</strong>： <a target="_blank" rel="noopener" href="https://www.trae.com.cn/">https://www.trae.com.cn/</a></p>
+<p><strong>DeepSeek结合Claude</strong>： GitHub： <a target="_blank" rel="noopener" href="https://github.com/getAsterisk/deepclaude">https://github.com/getAsterisk/deepclaude</a>  ；<br>  在线Chat： <a target="_blank" rel="noopener" href="https://deepclaude.com/chat">https://deepclaude.com/chat</a></p>
+<p><strong>Perplexity高效信息检索</strong>： <a target="_blank" rel="noopener" href="https://www.perplexity.ai/">https://www.perplexity.ai/</a></p>
+<blockquote>
+<p>Perplexity 是由前OpenAI研究科学家Aravind Srinivas创立的人工智能搜索引擎。它结合了实时联网检索、权威文献溯源、多模态呈现等特性，堪称 AI 时代的新一代搜索神器。与传统搜索引擎相比，它更高效、更精准，也更智能。同时与DeepSeek等相比，又不用担心出现幻觉问题。</p>
+</blockquote>
+<p><strong>腾讯元宝</strong>： <a target="_blank" rel="noopener" href="https://yuanbao.tencent.com/chat/naQivTmsDa">https://yuanbao.tencent.com/chat/naQivTmsDa</a></p>
+<p><strong>AI时代的代码编辑器</strong>： <a target="_blank" rel="noopener" href="https://zed.dev/">https://zed.dev/</a></p>
+<p><strong>Monica</strong>：基于Google浏览器的Chrome扩展插件，主打AI assistant，以浏览器的插件的形式始终在浏览器旁边随时支持你写作、搜索、阅读等： <a target="_blank" rel="noopener" href="https://monica.im/home">https://monica.im/home</a></p>
+<p><strong>Manus——全球首款通用Agent（自主智能体）</strong>： <a target="_blank" rel="noopener" href="https://manus.im/">https://manus.im/</a></p>
+<blockquote>
+<p>Manus来自拉丁语Mens et Manus，就是手脑并用（mind and hand）的意思。Manus是一个真正自主的AI代理，能够解决各类复杂多变的任务。与传统AI助手不同，Manus不仅能提供建议或答案，还能直接交付完整的任务成果。创始人肖弘（昵称小红，英文名Red）。2022年，他正式创立了Monica，并专注于海外市场。通过推出独立开发者产品ChatGPT for Google，Monica迅速完成了冷启动，并获得了大量用户。截至2024年，Monica的用户数量已达到1000万。</p>
+</blockquote>
+<p><strong>OpenManus</strong>： <a target="_blank" rel="noopener" href="https://github.com/mannaandpoem/OpenManus">https://github.com/mannaandpoem/OpenManus</a></p>
+<p><strong>Manus中文版</strong>：  <a target="_blank" rel="noopener" href="https://manus.monica.cn/">https://manus.monica.cn/</a></p>
+<p><strong>ChatPDF，读取pdf文件</strong>： <a target="_blank" rel="noopener" href="https://www.chatpdf.com/zh?via=via&gad_source=1">https://www.chatpdf.com/zh?via=via&amp;gad_source=1</a></p>
+<hr>
+<h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><p><strong>将截图、网站URL转换为代码，辅助前端设计</strong>： <a target="_blank" rel="noopener" href="https://copyweb.ai/">https://copyweb.ai/</a></p>
+<p><strong>前端开发，图标库</strong>： <a target="_blank" rel="noopener" href="https://remixicon.com/">https://remixicon.com/</a></p>
+<p><strong>自动为音视频生成字幕并翻译为多语言的AI工具</strong>：video-subtitle-master </p>
+<p><strong>导入图片，OCR识别其中的文本</strong>： <a target="_blank" rel="noopener" href="https://olocr.com/ocr?l=chinese_simplified">https://olocr.com/ocr?l=chinese_simplified</a></p>
+<p><strong>移除图片背景（抠图）</strong>： <a target="_blank" rel="noopener" href="https://pixian.ai/">https://pixian.ai/</a></p>
+<p><strong>模拟器游戏网站</strong>： <a target="_blank" rel="noopener" href="https://www.emu666.com/">https://www.emu666.com/</a> </p>
+<p><strong>像素画生成器</strong>： <a target="_blank" rel="noopener" href="https://store.steampowered.com/app/3475120">https://store.steampowered.com/app/3475120</a> </p>
+<p><strong>Z-Library</strong>： <a target="_blank" rel="noopener" href="https://z-library.sk/">https://z-library.sk/</a>  。   <a target="_blank" rel="noopener" href="https://zh.go-to-library.sk/">https://zh.go-to-library.sk/</a></p>
+<p><strong>动漫视频生成模型AniSora V3（b站开发的）</strong>： <a target="_blank" rel="noopener" href="https://github.com/bilibili/Index-anisora">https://github.com/bilibili/Index-anisora</a></p>
+<p><strong>Stable Audio 2.0音乐创作</strong>： <a target="_blank" rel="noopener" href="https://stableaudio.com/user-guide/model-2">https://stableaudio.com/user-guide/model-2</a><br> <a target="_blank" rel="noopener" href="https://huggingface.co/stabilityai/stable-audio-open-small">https://huggingface.co/stabilityai/stable-audio-open-small</a></p>
+<p><strong>Suno AI Music</strong>： <a target="_blank" rel="noopener" href="https://suno.com/home">https://suno.com/home</a></p>
+<p><strong>AI日报</strong>： <a target="_blank" rel="noopener" href="https://ai.hubtoday.app/">https://ai.hubtoday.app/</a></p>
+<p><strong>Kyutai TTS文本转语音模型</strong>： <a target="_blank" rel="noopener" href="https://kyutai.org/next/tts">https://kyutai.org/next/tts</a></p>
+<p><strong>AI动画引擎Fogsight（雾象）</strong>： <a target="_blank" rel="noopener" href="https://github.com/fogsightai/fogsight">https://github.com/fogsightai/fogsight</a></p>
+<hr>
+<h3 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h3><p><strong>视频教程&#x2F;AI 大神Karpathy再发LLM介绍视频，入门必看</strong>： <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1jDNEeJEmm/?buvid=XUBDA72B99FD73669D6049B20F1AAEEC146A7&from_spmid=main.push.54.8556605104796762399&is_story_h5=false&mid=ohR1Re4OGk4SNAon+My6Fg==&plat_id=116&share_from=ugc&share_medium=android&share_plat=android&share_session_id=9fd31c9d-af88-4beb-8a4a-ea73f8c0ded1&share_source=COPY&share_tag=s_i&spmid=united.player-video-detail.0.0%C3%97tamp=1738806114&unique_k=rteIiGl&up_id=1741797">https://www.bilibili.com/video/BV1jDNEeJEmm/?buvid=XUBDA72B99FD73669D6049B20F1AAEEC146A7&amp;from_spmid=main.push.54.8556605104796762399&amp;is_story_h5=false&amp;mid=ohR1Re4OGk4SNAon%2BMy6Fg%3D%3D&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=android&amp;share_plat=android&amp;share_session_id=9fd31c9d-af88-4beb-8a4a-ea73f8c0ded1&amp;share_source=COPY&amp;share_tag=s_i&amp;spmid=united.player-video-detail.0.0×tamp=1738806114&amp;unique_k=rteIiGl&amp;up_id=1741797</a></p>
+<p><strong>DeepSeek-V3 Technical Report</strong>： <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2412.19437">https://arxiv.org/abs/2412.19437</a></p>
+<p><strong>EZ-Encoder DeepSeek-R1 论文详解（Top down讲解）</strong>： <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14dPfe5EJD/?spm_id_from=333.337.search-card.all.click&vd_source=b977492be3d49e2d83b71bdc08a86e3c">https://www.bilibili.com/video/BV14dPfe5EJD/?spm_id_from=333.337.search-card.all.click&amp;vd_source=b977492be3d49e2d83b71bdc08a86e3c</a></p>
+<p><strong>Prof. Tom Yeh 科罗拉多大学 用Excel表讲解DeepSeek。</strong></p>
+<p><strong>DeepSeek report读后感-模型的哲学,产业的影响和国家的竞争</strong> <a target="_blank" rel="noopener" href="https://www.xiaoyuzhoufm.com/episode/67b5acc3606e5c59408096d5?s=eyJ1IjoiNjEwNGQ4NWRlMGY1ZTcyM2JiMzVkZTI3In0=0">https://www.xiaoyuzhoufm.com/episode/67b5acc3606e5c59408096d5?s=eyJ1IjoiNjEwNGQ4NWRlMGY1ZTcyM2JiMzVkZTI3In0%3D0</a></p>
+<p><strong>浙大《大模型基础》</strong>： <a target="_blank" rel="noopener" href="https://github.com/ZJU-LLMs/Foundations-of-LLMs">https://github.com/ZJU-LLMs/Foundations-of-LLMs</a></p>
+<p><strong>token（词元）</strong>：在大型语言模型中，”token”是指文本中的一个最小单位。通常，一个token可以是一个单词、一个标点符号、一个数字、一个符号等。在自然语言处理中，tokenization是将一个句子或文本分成tokens的过程。</p>
+<p><strong>OpenAI Deep Research</strong>：面临DeepSeek大举进攻，OpenAI日前推deep research似乎扳回一城。OpenAI日前推出新的AI代理（AI Agent）功能deep research，可自动查找大量资料，并整理成完整报告，可说是全年无休的研究助理，不少在行销或学术研究领域的网友试用后盛赞是「最强研究助理」。想要完整了解一个主题的相关知识，往往需要花费大量心力查找和整理资料，但现在只要一个简单的指令，就能让AI代劳。deep research号称可以在数十分钟内，就完成人类需要研究数小时的事。AI Agent是2025年的科技关键字，也就是AI可以发挥思考和行动的能力，自行完成任务。OpenAI表示，deep research专为从事密集知识工作的人们打造，例如金融、科学、政策和工程领域的专业人士，帮助他们进行彻底且精确的研究；对于一般人而言，也可在购买汽车或家具等，需要事先搜集资讯的产品时，让AI提供个人化的购物建议。</p>
+<p><strong>LLM幻觉</strong>：在LLMs中，幻觉（hallucinations）出现在模型生成的文本偏离其训练集中实际数据的情况，它制造出看似可信但缺乏事实或背景证据支持的信息，这些幻觉可能导致生成不准确或误导性信息。</p>
+<p><strong>幻觉检测</strong>： <a target="_blank" rel="noopener" href="https://github.com/amazon-science/RefChecker">https://github.com/amazon-science/RefChecker</a></p>
+<hr>
+<h3 id="提示词"><a href="#提示词" class="headerlink" title="提示词"></a>提示词</h3><p><strong>与书中人物对话：</strong></p>
+<blockquote>
+<p>I want you to act like {角色} from {出处}. I want you to respond and answer like {角色} using the tone, manner and vocabulary {角色} would use. Do not write any explanations. Only answer like {角色}. You must know all of the knowledge of {角色}. The entire conversation and instructions should be provided in Chinese. My first sentence is ‘Hi {角色}.’</p>
+</blockquote>
+<p><strong>DeepSeek提示词&#x2F;API文档：</strong>  <a target="_blank" rel="noopener" href="https://api-docs.deepseek.com/zh-cn/prompt-library">https://api-docs.deepseek.com/zh-cn/prompt-library</a> </p>
+<hr>
+<h3 id="即刻"><a href="#即刻" class="headerlink" title="即刻"></a>即刻</h3><p><strong>Talk is cheap, show me the code. –&gt; Code is cheap, show me the prompt?</strong></p>
+<p><strong>Monk Mode &#x3D; 修行模式</strong> ：关掉无意义APP、暂停低质量社交、只为真正重要的目标留时间</p>
+<p><strong>更自然、理性的异性交往方式。</strong></p>
+<p><strong>自然选择AI EVE</strong></p>
+<p><strong>AI对职业冲击</strong>：按照受GPT冲击大小排序，排在第一的是编程，冲击的相关性高达0.623，其次是写作和阅读理解。而受冲击程度排在最末尾的是批判性思考、学习策略、科学思维，ChatGPT冲击的相关性是-0.23，也就是说，如果未来你的谋生技巧和生活，对这些技能的依赖度很高，那么受ChatGPT冲击程度反而会下降。Critical thinking，批判性思维。</p>
+<p><strong>Love is an activity</strong>: 爱是一种积极的行动，而不是被动的感受。</p>
+<blockquote>
+<p>哲学家埃里希·弗罗姆（Erich Fromm）的著作《爱的艺术》（The Art of Loving）。</p>
+</blockquote>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Study/" class="print-no-link">#Study</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>学习|AI</div>
+      <div>http://example.com/2025/10/01/p11_AI/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Yicun</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年10月1日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/10/01/p1_fox/" title="阅读|飞狐外传（金庸著）">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">阅读|飞狐外传（金庸著）</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/10/01/p10_EVA/" title="补番|EVA新世纪福音战士">
+                        <span class="hidden-mobile">补番|EVA新世纪福音战士</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
