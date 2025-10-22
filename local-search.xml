@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>学习|工具</title>
+    <link href="/2025/10/22/p14_tool/"/>
+    <url>/2025/10/22/p14_tool/</url>
+    
+    <content type="html"><![CDATA[<hr><h3 id="开源代码"><a href="#开源代码" class="headerlink" title="开源代码"></a>开源代码</h3><p><strong>（官方）内部可用函数</strong>： <a href="https://www.openfoam.com/documentation/guides/latest/doc/openfoam-guide-expression-syntax.html">https://www.openfoam.com/documentation/guides/latest/doc/openfoam-guide-expression-syntax.html</a></p><p><strong>湍流入口</strong>： <a href="https://github.com/NHERI-SimCenter/TurbulenceInflowTool">https://github.com/NHERI-SimCenter/TurbulenceInflowTool</a><br>用户手册： <a href="https://nheri-simcenter.github.io/TinF-Documentation/index.html">https://nheri-simcenter.github.io/TinF-Documentation/index.html</a></p><p><strong>增厚火焰模型</strong>： <a href="https://github.com/arintanen/TFMFoam">https://github.com/arintanen/TFMFoam</a><br>动态增厚火焰模型： <a href="https://github.com/hahspk/DTF">https://github.com/hahspk/DTF</a></p><p><strong>动态负载均衡DLB</strong>： <a href="https://github.com/Aalto-CFD/DLBFoam">https://github.com/Aalto-CFD/DLBFoam</a><br>DLB算例： <a href="https://github.com/Aalto-CFD/DLBFoam-Advanced-Tutorials">https://github.com/Aalto-CFD/DLBFoam-Advanced-Tutorials</a></p><h3 id="中文教程"><a href="#中文教程" class="headerlink" title="中文教程"></a>中文教程</h3><p>starccm网格转of： <a href="https://zhuanlan.zhihu.com/p/270397232">https://zhuanlan.zhihu.com/p/270397232</a><br>fluent网格转of： <a href="https://blog.csdn.net/weixin_43325228/article/details/129353369">https://blog.csdn.net/weixin_43325228/article/details/129353369</a><br>OpenFOAM中求解马赫数与y+： <a href="https://blog.csdn.net/weixin_43325228/article/details/129657119">https://blog.csdn.net/weixin_43325228/article/details/129657119</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Study</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>阅读|亲密关系（罗兰·米勒著）</title>
     <link href="/2025/10/13/p13_love/"/>
     <url>/2025/10/13/p13_love/</url>
